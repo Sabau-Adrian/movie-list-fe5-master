@@ -1,0 +1,47 @@
+.main {
+  margin-top: 10px;
+  
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  
+}
+
+.list {
+  list-style: none;
+  width: 100%;
+  column-count: 4 ;
+  background-color: #261C2C;
+  
+  
+}
+
+.listItem {
+  
+  height: 690px;
+  width:400px;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #6E85B2;
+  align-items: center;
+  margin-bottom: 20px;
+ border-radius: 1%;
+}
+
+
+.listItem img {
+  border-radius: 1%;
+  
+}
+
+.listItem .addMovie {
+  display: none;
+}
+
+.listItem:hover .addMovie {
+  display: inline-flex;
+}
