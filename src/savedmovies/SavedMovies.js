@@ -4,6 +4,7 @@ import TrashIcon from "@material-ui/icons/Delete";
 import StarIcon from "@material-ui/icons/StarOutlined";
 
 import styles from "./SavedMovies.module.css";
+import { StayPrimaryLandscapeSharp } from "@material-ui/icons";
 
 const MovieItem = (props) => {
   const handleMouseOver = (item) => {
@@ -32,15 +33,15 @@ const MovieItem = (props) => {
     { id: 4, active: false },
   ]);
   return (
-    <div><li className={styles.background}>
+    <div className={styles.background}><div className={styles.card_container} >
       <div className={styles.poster_container}>
         <img src={imgUrl} alt={movie.title} />
       </div>
       <div className={styles.description_container}><span className={styles.movie_title}>Title:{movie.title}</span>
-      <span className={styles.release_date}>Release date:{movie.release_date}</span>
-      <span className={styles.vote_average}>Rating:{movie.vote_average}</span>
-      <span className={styles.ratings}>Rate:
-        {ratings.map((item, index) => {
+      <span className={styles.release_date}>Release date: {movie.release_date}</span>
+      <div className={styles.wrapper}><div className={styles.wrapper2}><span className={styles.vote_average}>Rating: {movie.vote_average}</span>
+      <span className={styles.ratings}>Rate:    
+         {ratings.map((item, index) => {
           return (
             <StarIcon
               className={[styles.star, item.active && styles.active].join(" ")}
@@ -48,21 +49,22 @@ const MovieItem = (props) => {
             />
           );
         })}
-      </span>
-      <span>
-        <Button onClick={() => props.onMovieDelete(movie.id)}>
+      </span></div>
+      <span className={styles.delete_button}>
+        <Button style={{color: 'red'}}
+        onClick={() => props.onMovieDelete(movie.id)}>
           <TrashIcon />
         </Button>
       </span></div>
-    </li></div>
+    </div></div></div>
   );
 };
 
 const SavedMovies = (props) => {
   return (
-    <div class="saved_container">
+    <div className={styles.container}>
       {props.savedMovies && props.savedMovies.length > 0 ? (
-        <ul>
+        <ul className={styles.saved_container}>
           {props.savedMovies.map((movie) => (
             <MovieItem
               movie={movie}

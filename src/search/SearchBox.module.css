@@ -1,21 +1,25 @@
 .main {
-  margin-top: 10px;
-  
+  color: red;
+  padding: 20px;
+  background-color: white;
+  color: black;
 }
 
 .box {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  color: black;
   
 }
 
 .list {
+  padding-top: 20px;
   list-style: none;
   width: 100%;
   column-count: 4 ;
-  background-color: #261C2C;
-  
+  background-color: white;
+  color:white;
   
 }
 
@@ -26,7 +30,7 @@
   display:flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: #6E85B2;
+  background-color: #393E46;
   align-items: center;
   margin-bottom: 20px;
  border-radius: 1%;
@@ -35,6 +39,8 @@
 
 .listItem img {
   border-radius: 1%;
+  height: 600px;
+  width: 400px;
   
 }
 
@@ -44,4 +50,8 @@
 
 .listItem:hover .addMovie {
   display: inline-flex;
+}
+.box{
+  display:flex;
+  align-items: center;
 }

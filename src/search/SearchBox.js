@@ -59,6 +59,7 @@ const SearchBox = (props) => {
     <div className={styles.main}>
       <div className={styles.box}>
         <TextField
+          color="primary"
           label="Search for a movie"
           variant="outlined"
           value={term}
@@ -67,6 +68,12 @@ const SearchBox = (props) => {
           }}
         />
         <Button
+        style={{
+          backgroundColor: '#00ADB5',
+          color: 'white',
+          margin: '20px',
+          textAlign: "center"
+      }}
           variant="contained"
           color="primary"
           onClick={() =>
@@ -79,7 +86,7 @@ const SearchBox = (props) => {
         >
           Search
         </Button>
-        <RadioGroup
+        {/* <RadioGroup
           row
           aria-label="position"
           name="position"
@@ -101,7 +108,7 @@ const SearchBox = (props) => {
             checked={searchMode === "actors"}
             onChange={() => setSearchMode("actors")}
           />
-        </RadioGroup>
+        </RadioGroup> */}
       </div>
 
       <MovieList movies={movies} onMovieAdd={localMovieAdd} />
